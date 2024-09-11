@@ -1,10 +1,5 @@
 <script>
-export let data;
-
-function isValidImage(url) {
-    // Checking of de image url wel valid is
-    return /\.(jpg|jpeg|png|gif)$/i.test(url);
-  }
+  export let data;
 </script>
 
 <main>
@@ -14,7 +9,7 @@ function isValidImage(url) {
       <a href="/{person.id}">
           <img 
           class="card-image" 
-          src={isValidImage(person.avatar) ? person.avatar : '/placeholder.jpg'} 
+          src={(person.avatar) ? person.avatar : '/placeholder.jpg'} 
           alt="{person.name}"
           on:error="{(event) => event.target.src = '/placeholder.jpg'}"
         />
@@ -27,18 +22,31 @@ function isValidImage(url) {
 </main>
 
 <style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
   li {
     background-color: var(--turquoise);
     color: var(--blueberry);
+    border-radius: 16px;
+    padding: 1em;
 
+    width: 10rem;
+    height: 16rem;
+    margin: 1rem;
+  }
+
+  li a {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box;
-
-    width: 10em;
-    height: 16em;
   }
 
   li .card-image {
