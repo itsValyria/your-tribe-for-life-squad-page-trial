@@ -1,0 +1,28 @@
+/* ---------- Colors ---------- */
+
+:root {
+  --white: #fff;
+  --blueberry: #050542;
+  --turquoise: #66e5bf;
+  --lavender: #a675f5;
+  --call-to-action: #fffc86;
+}
+
+/* ---------- General Styles ---------- */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans';
+  background-color: var(--blueberry);
+  color: var(--turquoise);
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
